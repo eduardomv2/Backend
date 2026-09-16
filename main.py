@@ -28,9 +28,7 @@ from fastapi import FastAPI, HTTPException, Header
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-# ─────────────────────────────────────────
-# INICIALIZACIÓN
-# ─────────────────────────────────────────
+
 app = FastAPI(title="BrújulaTec API", version="2.0")
 
 app.add_middleware(
@@ -46,7 +44,7 @@ with open("feature_cols_swipeonly.json") as f:
 
 # Archivo donde se guardan los resultados
 RESULTADOS_FILE = Path("resultados.json")
-# Contraseña para el dashboard (cámbiala en producción)
+# Contraseña para el dashboard (para no hacer base de datos y trabajar con un .json mejor )
 ADMIN_KEY = os.getenv("ADMIN_KEY", "admin2026")
 
 CARRERAS_LABEL = {
